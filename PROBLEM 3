@@ -1,0 +1,42 @@
+#include <iostream>
+#include <conio.h>
+#include <cstring>
+
+using namespace std;
+
+int main()
+
+{
+	int q,a;
+	char arr[70], var;
+
+	cout << "ENTER THE VALUE/VARIABLE OF THE CHAR ARRAY: ";
+	cin >> arr;
+	
+	cout << "\n";
+	cout << "REVERSE: ";
+		
+	int size = strlen(arr);
+	for (q = 0; q < size; q++)
+	{
+		for (a = q + 1; a < size; a++)
+		{
+			if (arr[q] > arr[a])             
+			{
+				var = arr[q];                
+				arr[q] = arr[a];
+				arr[a] = var;
+			}
+		}
+	 }
+
+	for(q = 0; q < size; q++)
+	{
+		cout << arr[q];
+	}
+	
+	cout << "\n";
+	cout << "THIS IS THE CHAR ARRAY LENGTH: " << strlen(arr) + 1;
+_getch ();
+return 0;
+}
